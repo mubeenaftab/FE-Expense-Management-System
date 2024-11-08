@@ -1,0 +1,85 @@
+:root {
+    --color-light: #f3f3f3;
+    --color-dark: #242424;
+    --color-muted: #909090;
+    --color-background: #2A2A2A;
+    --color-separator: #242424;
+    --font-size-small: 12px;
+    --font-size-x-small: 11px;
+    --margin-small: 10px;
+    --margin-medium: 15px;
+    --padding-small: 4px 0;
+    --border-radius-small: 6px;
+    --height-chart: 130px;
+}
+
+.insights {
+    margin: var(--margin-small) var(--margin-medium);
+    margin-bottom: 13px;
+}
+
+.insights h3 {
+    font-size: var(--font-size-small);
+    color: var(--color-light);
+    margin-bottom: 5px;
+    position: relative;
+    border-bottom: 2px solid var(--color-dark);
+    padding-bottom: 5px;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+}
+
+.chart-container {
+    flex: 1;
+    margin-right: var(--margin-medium);
+}
+
+.chart-container:last-child {
+    margin-right: 0;
+}
+
+.chart-container h4 {
+    font-size: var(--font-size-x-small);
+    color: var(--color-muted);
+    position: relative;
+    text-align: start;
+}
+
+.bar-chart,
+.pie-chart {
+    background-color: var(--color-background);
+    border-radius: var(--border-radius-small);
+    padding: var(--padding-small);
+    height: var(--height-chart);
+}
+
+.charts::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: var(--color-separator);
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .charts {
+        flex-direction: column;
+    }
+
+    .chart-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .charts::after {
+        display: none;
+    }
+}

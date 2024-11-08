@@ -1,0 +1,37 @@
+:root {
+    --background-dark: #383838;
+    --text-light: #cfcfcf;
+    --text-muted: #C4C4C4;
+    --border-radius: 8px;
+    --font-size-small: 12px;
+    --height-small: 25px;
+    --padding-small: 5px 7px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.year-dropdown {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    font-weight: 500;
+    border: none;
+    padding: var(--padding-small);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-small);
+    cursor: pointer;
+    width: 90px;
+    height: var(--height-small);
+    text-align: left;
+    margin-left: auto;
+}
+
+.year-dropdown option {
+    background-color: var(--background-dark);
+    color: var(--text-muted);
+}
